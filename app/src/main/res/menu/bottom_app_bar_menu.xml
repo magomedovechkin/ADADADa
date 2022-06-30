@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/app_bar_home"
+            android:icon="@drawable/home_icon"
+            android:iconTint="#D3D3D3"
+            android:title="home"
+            app:showAsAction="always"/>
+
+        <item
+            android:id="@+id/app_bar_statics"
+            android:icon="@drawable/statistic_icon"
+            android:iconTint="#D3D3D3"
+            android:title="statics"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/app_bar_routines"
+            android:icon="@drawable/routines_icon"
+            android:iconTint="#D3D3D3"
+            android:title="routines"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/app_bar_setting"
+            android:icon="@drawable/setting_icon"
+            android:iconTint="#D3D3D3"
+            android:title="setting"
+            app:showAsAction="always" />
+</menu>

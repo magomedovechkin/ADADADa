@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home.HomeFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2A2A37">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Home"
+                    android:textColor="@color/white"
+                    android:textSize="48px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_location"
+                    android:text="your adress"
+                    android:textColor="#707070"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="ROOMS"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/rectangle_11" />
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_room_btn"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="235dp"
+                android:layout_marginTop="70dp"
+                android:backgroundTint="#984E4F"
+                app:backgroundTint="#984E4F"
+                app:fabSize="mini"
+                android:src="@drawable/ic_icon_add"
+                android:onClick="add_room_click"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:numColumns="2"
+            android:paddingTop="10dp"
+            android:paddingStart="25dp"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="-10dp"
+            tools:listitem="@layout/room_list_item"/>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

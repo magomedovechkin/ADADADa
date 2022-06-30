@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserRoomActiviry">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/user_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A37"
+        app:navigationIcon="@drawable/ic_icon_back"
+        app:title="Room"
+        app:titleTextColor="@color/white"
+        app:titleCentered="true">
+
+
+        <ImageButton
+            android:id="@+id/add_room_element"
+            android:layout_width="48px"
+            android:layout_height="48px"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_icon_add"
+            android:textStyle="italic"
+            android:backgroundTint="#2A2A37"/>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:id="@+id/element_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/light_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/light_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:onClick="light_click"
+                android:background="@drawable/ic_icon_light_off"/>
+
+            <TextView
+                android:id="@+id/light_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light"
+                android:textSize="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/thermostat_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/thermostat_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_thermostat"
+                android:layout_gravity="center"
+                android:onClick="thermostat_click"/>
+
+            <TextView
+                android:id="@+id/thermostat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thermostat"
+                android:textSize="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/user_room_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
